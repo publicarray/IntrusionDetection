@@ -1,0 +1,17 @@
+7d112882d482751ebc323b30524ca7b1|seb|staff|-rw-r--r--|regular file|26 Mar 23:14|54 280 2680|/Users/seb/git/IntrusionDetection/asm/folder1/aliases
+85223f3112ef7abc299878bccdf23e1c|seb|staff|-rw-r--r--|regular file|15 Sep 2015|5 10 62|/Users/seb/git/IntrusionDetection/asm/folder1/bash_profile
+fa83eeada832078006f0bf572bf41761|seb|staff|-rw-r--r--|regular file|17 Jun 2016|19 39 265|/Users/seb/git/IntrusionDetection/asm/folder1/bashrc
+dff42607f5c974d94a1bc2ba208147d8|seb|staff|-rw-r--r--|regular file|11 Nov 21:54|31 82 588|/Users/seb/git/IntrusionDetection/asm/folder1/editorconfig
+51fe06855b93d44d617b3c2102d67304|seb|staff|-rw-r--r--|regular file|21 Apr 20:54|21 39 325|/Users/seb/git/IntrusionDetection/asm/folder1/eslintrc.js
+2f034cb1d857b085c470ee43562fa121|seb|staff|-rw-r--r--|regular file|6 Dec 08:52|23 45 442|/Users/seb/git/IntrusionDetection/asm/folder1/exports
+92ecf7138b562f0a1f5d5cbd14294526|seb|staff|-rw-r--r--|regular file|27 Jan 10:52|143 620 4371|/Users/seb/git/IntrusionDetection/asm/folder1/functions
+78e93a29d6ce72ef1feaa0ac5d0a4867|seb|staff|-rw-r--r--|regular file|16 Sep 2016|110 439 3662|/Users/seb/git/IntrusionDetection/asm/folder1/gitconfig
+8057094786b9868606e29c91b75b86d8|seb|staff|-rw-r--r--|regular file|26 Mar 23:14|2 4 56|/Users/seb/git/IntrusionDetection/asm/folder1/gitconfig.local
+dc77725cace7d9090cb9d5bc00b72c4b|seb|staff|-rw-r--r--|regular file|9 May 2015|72 131 913|/Users/seb/git/IntrusionDetection/asm/folder1/gitignore_global
+d11502e23bb2fdcffc5822ee77f9f267|seb|staff|-rw-r--r--|regular file|17 Jun 2016|11 65 488|/Users/seb/git/IntrusionDetection/asm/folder1/usershell
+eadde13dd7fd6a99a9710ebdc096ed64|seb|staff|-rw-r--r--|regular file|18 Jun 2016|21 69 496|/Users/seb/git/IntrusionDetection/asm/folder1/zlogin
+c98f4e712f3b69e938fb03a8364ecede|seb|staff|-rw-r--r--|regular file|21 Aug 2016|173 531 3716|/Users/seb/git/IntrusionDetection/asm/folder1/zpreztorc
+e4d70e0b7ae4987cb1e6b9e4f144dda9|seb|staff|-rw-r--r--|regular file|21 Sep 2016|39 118 800|/Users/seb/git/IntrusionDetection/asm/folder1/zshrc
+1dc75180888e587cb0cd5653d3081633|seb|staff|-rw-r--r--@|regular file|26 Jan 22:04|13 43 317|/Users/seb/git/IntrusionDetection/asm/folder2/file.txt
+f25e2944eb2b99a8cc74a6e1502d7416|seb|staff|-rw-r--r--@|regular file|26 Mar 18:38|78 671 24636|/Users/seb/git/IntrusionDetection/asm/folder2/image.png
+f25e2944eb2b99a8cc74a6e1502d7416|seb|staff|lrwxr-xr-x|directory|6 May 22:44|78 671 24636|/Users/seb/git/IntrusionDetection/asm/folder2/stuff

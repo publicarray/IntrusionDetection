@@ -1,0 +1,17 @@
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/aliases
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/bash_profile
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/bashrc
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/editorconfig
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/eslintrc.js
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/exports
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/functions
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/gitconfig
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/gitconfig.local
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/gitignore_global
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/usershell
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/zlogin
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/zpreztorc
+Good: /Users/seb/git/IntrusionDetection/asm/folder1/zshrc
+Bad: /Users/seb/git/IntrusionDetection/asm/folder2/file-changed.txt
+Good: /Users/seb/git/IntrusionDetection/asm/folder2/image.png
+Bad: /Users/seb/git/IntrusionDetection/asm/folder2/stuff
