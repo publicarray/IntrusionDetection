@@ -27,7 +27,7 @@ file_details() {
         fgroup=$(echo "$lsl" | awk '{print $4}')
         fmodified=$(echo "$lsl" | awk '{print $6, $7, $8}')
         if [ "$ftype" = "regular file" ]; then
-            fhash=$(md5 -q "$f")
+            fhash=$(hash_algorithm "$f")
             fwc=$(wc "$f" | awk '{print $1, $2, $3}')
         fi
     fi
@@ -47,5 +47,20 @@ file_type() {
         echo "regular file"
     else
         echo "unknown"
+    fi
+}
+
+hash_algorithm() {
+    # https://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script
+    if command -v sha256sum >/dev/null 2>&1; then
+        sha256sum $1 | awk '{ print $1 }'
+    elif command -v gsha256sum >/dev/null 2>&1; then
+        gsha256sum $1 | awk '{ print $1 }'
+    elif command -v sha1sum >/dev/null 2>&1; then
+        sha1sum $1 | awk '{ print $1 }'
+    elif command -v gsha1sum >/dev/null 2>&1; then
+        gsha1sum $1 | awk '{ print $1 }'
+    else
+        md5 -q $1
     fi
 }
