@@ -78,6 +78,7 @@ config() {
                 fi
                 ;;
             ("exclude "*)
+                # ToDo
                 search=$(echo "$line" | awk '{print $2}')
                 echo "exclude: $search"
                 ;;

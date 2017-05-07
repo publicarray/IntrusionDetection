@@ -33,6 +33,7 @@ file_details() {
     fi
 
     echo "$fhash|$fowner|$fgroup|$fpermissions|$ftype|$fmodified|$fwc|$fpath"
+    unset fwc fhash fmodified fgroup fowner fpermissions lsl
 }
 
 # regular file, directory, symlink, unknown
