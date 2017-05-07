@@ -43,8 +43,9 @@ write_file() {
         # ask before overwriting file
         # https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script
         while true; do
-            read -r "Do you wish overwrite $FILE?" yn
-            case $yn in
+            printf "Do you wish overwrite %s? [y/n]" "$FILE"
+            read -r REPLY
+            case $REPLY in
                 [Yy]* )
                     # > "$FILE"
                     cp /dev/null "$FILE" # truncate file
