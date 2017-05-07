@@ -7,23 +7,29 @@ function validate {
 
     for f in $files
     do
-        check_db $f >> $FILE
+        check_db $f
     done
 }
 
 function check_db {
+    red=`tput setaf 1`
+    green=`tput setaf 2`
+    reset=`tput sgr0`
+
     # ToDo: can this loop be skipped? sort first?
      while IFS='' read -r line || [[ -n "$line" ]]; do
         found=0
-        if [[ "$line" = $(file_details "$f") ]]; then
-            echo "Good: $1"
+        if [[ "$line" = $(file_details "$1") ]]; then
             found=1
+            echo "${green}Good: $1${reset}"
+            echo "Good: $1" >> $FILE
             break
         fi
     done < "$DB"
 
     # if we have not found a match
     if [ $found -eq 0 ]; then
-        echo "Bad: $1"
+        echo "${red}Bad: $1${reset}"
+        echo "Bad: $1" >> $FILE
     fi
 }

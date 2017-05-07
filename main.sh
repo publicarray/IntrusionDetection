@@ -30,20 +30,28 @@ function main {
         config "create"
     elif [ $1 = "-v" ]; then
         write_file "$2"
-        config " validate"
+        config "validate"
     fi
 }
 
 function write_file {
     FILE="$1";
-    # create and clear file
     if [ -f $FILE ]; then
         # ask before overwriting file
-        rm -i $FILE
-        if [ -f $FILE ]; then # file not deleted
-            echo "Exiting..."
-            exit 1
-        fi
+        # https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script
+        while true; do
+            read -p "Do you wish overwrite $FILE?" yn
+            case $yn in
+                [Yy]* )
+                    >$FILE;
+                    break;;
+                [Nn]* )
+                    echo "Exiting...";
+                    exit;;
+                * )
+                    echo "Please answer yes or no.";;
+            esac
+        done
     fi
 }
 
@@ -56,8 +64,13 @@ function config {
     while IFS='' read -r line || [[ -n "$line" ]]; do
         if [[ "$line" ==  "include "* ]]; then
             search=$(echo $line | awk '{print $2}')
-            echo "include: $search"
-            $($1 $search) # run command
+            echo "Search: $search"
+
+            if [ "$1" = "create" ]; then
+                create $search
+            elif [ "$1" = "validate" ]; then
+                validate $search
+            fi
         fi
 
         if [[ "$line" ==  "exclude "* ]]; then
