@@ -14,4 +14,4 @@ Good: /Users/seb/git/IntrusionDetection/asm/folder1/zpreztorc
 Good: /Users/seb/git/IntrusionDetection/asm/folder1/zshrc
 Bad: /Users/seb/git/IntrusionDetection/asm/folder2/file-changed.txt
 Good: /Users/seb/git/IntrusionDetection/asm/folder2/image.png
-Bad: /Users/seb/git/IntrusionDetection/asm/folder2/stuff
+Good: /Users/seb/git/IntrusionDetection/asm/folder2/stuff
