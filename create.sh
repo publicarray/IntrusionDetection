@@ -9,7 +9,7 @@ create() {
 
     for f in $files
     do
-        file_details "$f" >> $FILE
+        file_details "$f" >> "$FILE"
     done
 }
 
@@ -19,8 +19,9 @@ file_details() {
 
     if [ "$ftype" != "unknown" ]; then
         # https://unix.stackexchange.com/questions/128985/why-not-parse-ls
-        # use alternative commands such as `find`or `stat`
-        lsl=$(ls -l "$f" | sed -n '$p') # fix for directories, ls -l prints 2 lines for directories
+        # use alternative commands such as `find`or `stat` [SC2012]
+        # https://github.com/koalaman/shellcheck/wiki/SC2012
+        lsl=$(ls -l "$f" | sed -n '$p') # temp fix for directories, ls -l prints 2 lines for directories
         fpermissions=$(echo "$lsl" | awk '{print $1}')
         fowner=$(echo "$lsl" | awk '{print $3}')
         fgroup=$(echo "$lsl" | awk '{print $4}')

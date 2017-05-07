@@ -67,21 +67,23 @@ config() {
     # https://stackoverflow.com/questions/10929453/read-a-file-line-by-line-assigning-the-value-to-a-variable
     # https://stackoverflow.com/questions/18789907/read-values-from-configuration-file-and-use-in-shell-script
     while IFS='' read -r line || [ -n "$line" ]; do
-        if [[ "$line" =  "include "* ]]; then
-            search=$(echo "$line" | awk '{print $2}')
-            echo "Search: $search"
-
-            if [ "$1" = "create" ]; then
-                create "$search"
-            elif [ "$1" = "validate" ]; then
-                validate "$search"
-            fi
-        fi
-
-        if [[ "$line" =  "exclude "* ]]; then
-            search=$(echo "$line" | awk '{print $2}')
-            echo "exclude: $search"
-        fi
+        case "$line" in
+            ("include "*)
+                search=$(echo "$line" | awk '{print $2}')
+                echo "Search: $search"
+                if [ "$1" = "create" ]; then
+                    create "$search"
+                elif [ "$1" = "validate" ]; then
+                    validate "$search"
+                fi
+                ;;
+            ("exclude "*)
+                search=$(echo "$line" | awk '{print $2}')
+                echo "exclude: $search"
+                ;;
+            (*)
+                echo "error parsing: $line";;
+        esac
     done < "$CONFIG_FILE"
 }
 
