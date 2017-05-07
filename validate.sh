@@ -1,4 +1,6 @@
-function validate {
+#!/bin/sh
+
+validate() {
     if [ -d $1 ]; then # directory
         files=$1/*
     elif [ -f $1 ]; then # file
@@ -11,7 +13,7 @@ function validate {
     done
 }
 
-function check_db {
+check_db() {
     red=`tput setaf 1`
     green=`tput setaf 2`
     reset=`tput sgr0`

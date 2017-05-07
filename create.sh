@@ -1,10 +1,10 @@
 #!/bin/sh
 
-function create {
-    if [ -d $1 ]; then # directory
-        files=$1/*
-    elif [ -f $1 ]; then # file
-        files=$1
+create() {
+    if [ -d "$1" ]; then # directory
+        files="$1/*"
+    elif [ -f "$1" ]; then # file
+        files="$1"
     fi
 
     for f in $files
@@ -13,11 +13,11 @@ function create {
     done
 }
 
-function file_details {
+file_details() {
     fpath="$1"
     ftype=$(file_type "$f")
 
-    if [ $"ftype" != "unknown" ]; then
+    if [ "$ftype" != "unknown" ]; then
         # https://unix.stackexchange.com/questions/128985/why-not-parse-ls
         # use alternative commands such as `find`or `stat`
         lsl=$(ls -l "$f" | sed -n '$p') # fix for directories, ls -l prints 2 lines for directories
@@ -25,7 +25,7 @@ function file_details {
         fowner=$(echo "$lsl" | awk '{print $3}')
         fgroup=$(echo "$lsl" | awk '{print $4}')
         fmodified=$(echo "$lsl" | awk '{print $6, $7, $8}')
-        if [ "$ftype" == "regular file" ]; then
+        if [ "$ftype" = "regular file" ]; then
             fhash=$(md5 -q "$f")
             fwc=$(wc "$f" | awk '{print $1, $2, $3}')
         fi
@@ -35,13 +35,13 @@ function file_details {
 }
 
 # regular file, directory, symlink, unknown
-function file_type {
+file_type() {
     #if [[ $1 -h ]]; then
-    if [[ -L $1 ]]; then
+    if [ -L "$1" ]; then
         echo "symlink"
-    elif [[ -d $1 ]]; then
+    elif [ -d "$1" ]; then
         echo "directory"
-    elif [[ -f $1 ]]; then
+    elif [ -f "$1" ]; then
         echo "regular file"
     else
         echo "unknown"
