@@ -20,16 +20,22 @@ main() {
 
     # If < 2 params, display usage info
     if [ "$#" -lt "2" ]; then
-        printf "usage: %s [arguments]\n  -c db-filename\n  -v db-filepath result-filename" "$0"
+        printf "usage: %s [arguments]\n  -c db-filename\n  -v result-filename" "$0"
         exit 1
     fi
 
-    # echo "I was called with $# parameters"
-    # echo "All parameters are $@"
-
-
     if [ "$1" = "-c" ]; then
         write_file "$2"
+        DB="$PWD/$2"
+        DBesc=$(echo "$DB" | sed 's_/_\\/_g')
+        # cache last db filepath
+        if [ -n "$(awk '/last-db=/ {print}' "$CONFIG_FILE")" ]; then
+            sed -i '' -e '/^last-db=/s/=.*/='"$DBesc"'/' $CONFIG_FILE
+        else
+# shellcheck disable=SC1004
+            sed -i '' -e '1s/^/last-db='"$DBesc"'\
+/' "$CONFIG_FILE" # hack: add new line at the end
+        fi
         config "create"
     elif [ "$1" = "-v" ]; then
         write_file "$2"
@@ -81,6 +87,9 @@ config() {
                 # ToDo
                 search=$(echo "$line" | awk '{print $2}')
                 echo "exclude: $search"
+                ;;
+            ("last-db="*)
+                DB=$(echo "$line" | awk -F '=' '/last-db=/ {print $2}')
                 ;;
             (*)
                 echo "error parsing: $line";;
