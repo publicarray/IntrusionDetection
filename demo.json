@@ -1,0 +1,526 @@
+{
+  "version": 1,
+  "width": 80,
+  "height": 24,
+  "duration": 26.002396,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/usr/local/bin/fish"
+  },
+  "stdout": [
+    [
+      0.080471,
+      "\u001b[30m\u001b(B\u001b[m\u001b]0;~/git/IntrusionDetection  fish\u0007"
+    ],
+    [
+      0.017104,
+      "\u001b]7;file://Macintosh.local/Users/seb/git/IntrusionDetection\u0007"
+    ],
+    [
+      0.065705,
+      "\u001b[30m\u001b(B\u001b[m\u001b]0;~/git/IntrusionDetection — fish\u0007"
+    ],
+    [
+      0.000249,
+      "\u001b[38;5;237m⏎\u001b(B\u001b[m                                                                              \r⏎ \r\u001b[2K"
+    ],
+    [
+      0.002689,
+      "\u001b[34m~/g/IntrusionDetection\u001b[30m\u001b(B\u001b[m:\u001b[33mmaster*\u001b[30m\u001b(B\u001b[m\u001b[36m\u001b[30m\u001b(B\u001b[m \u001b[32m❯\u001b[30m\u001b(B\u001b[m \u001b[K"
+    ],
+    [
+      1.0,
+      "."
+    ],
+    [
+      0.006906,
+      "\b\u001b[32m.\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.002965,
+      "\u001b[38;5;240m/main.sh -v result.txt \u001b[23D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.678027,
+      "\u001b[32m/\u001b[38;5;240mmain.sh -v result.txt \u001b[22D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.519896,
+      "\u001b[32mm\u001b[38;5;240main.sh -v result.txt \u001b[21D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.006423,
+      "\b\b\b\u001b[31m\u001b[1m./m\u001b(B\u001b[m\u001b[38;5;240main.sh -v result.txt \u001b[21D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.42537,
+      "\u001b[31m\u001b[1ma\u001b(B\u001b[m\u001b[38;5;240min.sh -v result.txt \u001b[20D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.680462,
+      "\u001b[31m\u001b[1mi\u001b(B\u001b[m\u001b[38;5;240mn.sh -v result.txt \u001b[19D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.184878,
+      "\u001b[31m\u001b[1mn\u001b(B\u001b[m\u001b[38;5;240m.sh -v result.txt \u001b[18D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.415354,
+      "\u001b[31m\u001b[1m.\u001b(B\u001b[m\u001b[38;5;240msh -v result.txt \u001b[17D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.401925,
+      "\u001b[31m\u001b[1ms\u001b(B\u001b[m\u001b[38;5;240mh -v result.txt \u001b[16D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.741416,
+      "\u001b[31m\u001b[1mh\u001b(B\u001b[m\u001b[38;5;240m -v result.txt \u001b[15D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.006725,
+      "\u001b[9D\u001b[32m./main.sh\u001b[38;5;240m -v result.txt \u001b[15D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.377287,
+      "\u001b[32m \u001b[38;5;240m-v result.txt \u001b[14D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.006337,
+      "\b \u001b[38;5;240m-v result.txt \u001b[14D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.329711,
+      "-\u001b[38;5;240mv result.txt \u001b[13D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.006199,
+      "\b-\u001b[38;5;240mv result.txt \u001b[13D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.418421,
+      "c\u001b[K"
+    ],
+    [
+      0.006889,
+      "\u001b[38;5;240m db.txt \b\b\b\b\b\b\b\b\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.744056,
+      " db.txt "
+    ],
+    [
+      0.003578,
+      "\b\b\b\b\b\b\b\b db.txt "
+    ],
+    [
+      0.708011,
+      "\r\n\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.029694,
+      "\u001b[30m\u001b(B\u001b[m\u001b]0;IntrusionDetection: ./main.sh -c db.txt  — ./main.sh\u0007\r"
+    ],
+    [
+      0.016791,
+      "reading conf.txt\r\n"
+    ],
+    [
+      0.015214,
+      "Search: /Users/seb/git/IntrusionDetection/asm/folder1\r\n"
+    ],
+    [
+      0.487465,
+      "Search: /Users/seb/git/IntrusionDetection/asm/folder2\r\n"
+    ],
+    [
+      0.099013,
+      "exclude: /Users/seb/git/IntrusionDetection/asm/folder3\r\n"
+    ],
+    [
+      0.06035,
+      "\u001b[30m\u001b(B\u001b[m\u001b]0;~/git/IntrusionDetection — fish\u0007"
+    ],
+    [
+      8.3e-05,
+      "\u001b[38;5;237m⏎\u001b(B\u001b[m                                                                              \r⏎ \r\u001b[2K"
+    ],
+    [
+      0.002903,
+      "\u001b[34m~/g/IntrusionDetection\u001b[30m\u001b(B\u001b[m:\u001b[33mmaster*\u001b[30m\u001b(B\u001b[m\u001b[36m\u001b[30m\u001b(B\u001b[m \u001b[32m❯\u001b[30m\u001b(B\u001b[m \u001b[K"
+    ],
+    [
+      1.0,
+      "."
+    ],
+    [
+      0.006382,
+      "\b\u001b[32m.\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.002838,
+      "\u001b[38;5;240m/main.sh -c db.txt \u001b[19D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.0392,
+      "\u001b[32m/\u001b[38;5;240mmain.sh -c db.txt \u001b[18D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.288181,
+      "\u001b[32mm\u001b[38;5;240main.sh -c db.txt \u001b[17D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.007331,
+      "\b\b\b\u001b[31m\u001b[1m./m\u001b(B\u001b[m\u001b[38;5;240main.sh -c db.txt \u001b[17D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.366992,
+      "\u001b[31m\u001b[1ma\u001b(B\u001b[m\u001b[38;5;240min.sh -c db.txt \u001b[16D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.85723,
+      "\u001b[31m\u001b[1mi\u001b(B\u001b[m\u001b[38;5;240mn.sh -c db.txt \u001b[15D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.183757,
+      "\u001b[31m\u001b[1mn\u001b(B\u001b[m\u001b[38;5;240m.sh -c db.txt \u001b[14D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.768387,
+      "\u001b[31m\u001b[1m.\u001b(B\u001b[m\u001b[38;5;240msh -c db.txt \u001b[13D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.362098,
+      "\u001b[31m\u001b[1ms\u001b(B\u001b[m\u001b[38;5;240mh -c db.txt \u001b[12D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.501635,
+      "\u001b[31m\u001b[1mh\u001b(B\u001b[m\u001b[38;5;240m -c db.txt \u001b[11D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.006865,
+      "\u001b[9D\u001b[32m./main.sh\u001b[38;5;240m -c db.txt \u001b[11D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.68938,
+      "\u001b[32m \u001b[38;5;240m-c db.txt \u001b[10D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.006936,
+      "\b \u001b[38;5;240m-c db.txt \u001b[10D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.25705,
+      "-\u001b[38;5;240mc db.txt \u001b[9D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.006853,
+      "\b-\u001b[38;5;240mc db.txt \u001b[9D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.681157,
+      "v\u001b[K"
+    ],
+    [
+      0.006865,
+      "\u001b[38;5;240m result.txt \u001b[12D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.544655,
+      " result.txt "
+    ],
+    [
+      0.003618,
+      "\u001b[12D result.txt "
+    ],
+    [
+      0.515902,
+      "\r\n\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.030211,
+      "\u001b[30m\u001b(B\u001b[m\u001b]0;IntrusionDetection: ./main.sh -v result.txt  — ./main.sh\u0007\r"
+    ],
+    [
+      0.004652,
+      "reading conf.txt\r\n"
+    ],
+    [
+      0.00958,
+      "Search: /Users/seb/git/IntrusionDetection/asm/folder1\r\n"
+    ],
+    [
+      0.04525,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/aliases\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.048754,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/bash_profile\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.045494,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/bashrc\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.045922,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/editorconfig\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.047157,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/eslintrc.js\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.047066,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/exports\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.046591,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/functions\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.046468,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/gitconfig\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.045282,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/gitconfig.local\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.046638,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/gitignore_global\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.046709,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/usershell\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.046813,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/zlogin\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.046053,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/zpreztorc\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.046489,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/zshrc\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.004952,
+      "Search: /Users/seb/git/IntrusionDetection/asm/folder2\r\n"
+    ],
+    [
+      0.046689,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder2/file.txt\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.046611,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder2/image.png\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.037741,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder2/stuff\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.005192,
+      "exclude: /Users/seb/git/IntrusionDetection/asm/folder3\r\n"
+    ],
+    [
+      0.058089,
+      "\u001b[30m\u001b(B\u001b[m\u001b]0;~/git/IntrusionDetection — fish\u0007"
+    ],
+    [
+      0.000103,
+      "\u001b[38;5;237m⏎\u001b(B\u001b[m                                                                              \r⏎ \r\u001b[2K"
+    ],
+    [
+      0.00273,
+      "\u001b[34m~/g/IntrusionDetection\u001b[30m\u001b(B\u001b[m:\u001b[33mmaster*\u001b[30m\u001b(B\u001b[m\u001b[36m\u001b[30m\u001b(B\u001b[m \u001b[32m❯\u001b[30m\u001b(B\u001b[m \u001b[K"
+    ],
+    [
+      1.0,
+      "t"
+    ],
+    [
+      0.007113,
+      "\b\u001b[31m\u001b[1mt\u001b(B\u001b[m"
+    ],
+    [
+      0.003037,
+      "\u001b[38;5;240mouch asm/folder2/file.txt \u001b[26D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      1.0,
+      "\u001b[31m\u001b[1mouch asm/folder2/file.txt \u001b(B\u001b[m"
+    ],
+    [
+      0.003687,
+      "\u001b[27D\u001b[32mtouch\u001b[30m\u001b(B\u001b[m asm/folder2/file.txt "
+    ],
+    [
+      1.0,
+      "\r\n\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.029212,
+      "\u001b[30m\u001b(B\u001b[m\u001b]0;IntrusionDetection: touch asm/folder2/file.txt  — touch\u0007\r"
+    ],
+    [
+      0.060705,
+      "\u001b[30m\u001b(B\u001b[m\u001b]0;~/git/IntrusionDetection — fish\u0007"
+    ],
+    [
+      0.000174,
+      "\u001b[38;5;237m⏎\u001b(B\u001b[m                                                                              \r⏎ \r\u001b[2K"
+    ],
+    [
+      0.002702,
+      "\u001b[34m~/g/IntrusionDetection\u001b[30m\u001b(B\u001b[m:\u001b[33mmaster*\u001b[30m\u001b(B\u001b[m\u001b[36m\u001b[30m\u001b(B\u001b[m \u001b[32m❯\u001b[30m\u001b(B\u001b[m \u001b[K"
+    ],
+    [
+      1.0,
+      "."
+    ],
+    [
+      0.006337,
+      "\b\u001b[32m.\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.002731,
+      "\u001b[38;5;240m/main.sh -v result.txt \u001b[23D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.286641,
+      "\u001b[32m/\u001b[38;5;240mmain.sh -v result.txt \u001b[22D\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      1.0,
+      "\u001b[32mmain.sh -v result.txt \u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.003595,
+      "\u001b[15D -v result.txt "
+    ],
+    [
+      0.603702,
+      "\r\n\u001b[30m\u001b(B\u001b[m"
+    ],
+    [
+      0.030517,
+      "\u001b[30m\u001b(B\u001b[m\u001b]0;IntrusionDetection: ./main.sh -v result.txt  — ./main.sh\u0007\r"
+    ],
+    [
+      0.004789,
+      "Do you wish overwrite result.txt? [y/n]"
+    ],
+    [
+      1.0,
+      "y"
+    ],
+    [
+      0.535391,
+      "\r\n"
+    ],
+    [
+      0.004604,
+      "reading conf.txt\r\n"
+    ],
+    [
+      0.011924,
+      "Search: /Users/seb/git/IntrusionDetection/asm/folder1\r\n"
+    ],
+    [
+      0.047233,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/aliases\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.043789,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/bash_profile\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.046163,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/bashrc\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.04605,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/editorconfig\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.045962,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/eslintrc.js\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.044827,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/exports\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.045833,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/functions\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.045805,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/gitconfig\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.045551,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/gitconfig.local\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.046382,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/gitignore_global\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.050318,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/usershell\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.049828,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/zlogin\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.046057,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/zpreztorc\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.048173,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder1/zshrc\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.004704,
+      "Search: /Users/seb/git/IntrusionDetection/asm/folder2\r\n"
+    ],
+    [
+      0.045589,
+      "\u001b[31mBad: /Users/seb/git/IntrusionDetection/asm/folder2/file.txt\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.04679,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder2/image.png\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.039369,
+      "\u001b[32mGood: /Users/seb/git/IntrusionDetection/asm/folder2/stuff\u001b(B\u001b[m\r\n"
+    ],
+    [
+      0.005122,
+      "exclude: /Users/seb/git/IntrusionDetection/asm/folder3\r\n"
+    ],
+    [
+      0.058587,
+      "\u001b[30m\u001b(B\u001b[m\u001b]0;~/git/IntrusionDetection — fish\u0007"
+    ],
+    [
+      9.1e-05,
+      "\u001b[38;5;237m⏎\u001b(B\u001b[m                                                                              \r⏎ \r\u001b[2K"
+    ],
+    [
+      0.00268,
+      "\u001b[34m~/g/IntrusionDetection\u001b[30m\u001b(B\u001b[m:\u001b[33mmaster*\u001b[30m\u001b(B\u001b[m\u001b[36m\u001b[30m\u001b(B\u001b[m \u001b[32m❯\u001b[30m\u001b(B\u001b[m \u001b[K"
+    ],
+    [
+      3.0,
+      "\r\n\u001b[30m\u001b(B\u001b[m\u001b[30m\u001b(B\u001b["
+    ]
+  ]
+}
