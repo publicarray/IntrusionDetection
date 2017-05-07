@@ -18,10 +18,11 @@ check_db() {
     green=$(tput setaf 2)
     reset=$(tput sgr0)
 
+    fdetails="$(file_details "$1")" # cache value for speed
     # ToDo: can this loop be skipped? sort first?
      while IFS='' read -r line || [ -n "$line" ]; do
         found=0
-        if [ "$line" = "$(file_details "$1")" ]; then
+        if [ "$line" = "$fdetails" ]; then
             found=1
             echo "${green}Good: $1${reset}"
             echo "Good: $1" >> "$FILE"
