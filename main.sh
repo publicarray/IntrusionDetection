@@ -20,7 +20,8 @@ main() {
 
     # If < 2 params, display usage info
     if [ "$#" -lt "2" ]; then
-        printf "usage: %s [arguments]\n  -c db-filename\n  -v result-filename" "$0"
+        printf "usage: %s [arguments]\n  -c db-filename\n  -v result-filename\n\n" "$0"
+        echo "home page: <https://github.com/publicarray/IntrusionDetection>"
         exit 1
     fi
 
