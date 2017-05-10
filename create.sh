@@ -1,13 +1,7 @@
 #!/bin/sh
 
 create() {
-    if [ -d "$1" ]; then # directory
-        files="$1/*"
-    elif [ -f "$1" ]; then # file
-        files="$1"
-    fi
-
-    for f in $files
+    for f in $(find "$1") $files
     do
         file_details "$f" >> "$FILE"
     done
@@ -15,17 +9,19 @@ create() {
 
 file_details() {
     fpath="$1"
+    # fname=$(stat --format "%N" "$f")
+    # fname=$(stat -f "%Sn" "$f")
     ftype=$(file_type "$f")
 
     if [ "$ftype" != "unknown" ]; then
-        # https://unix.stackexchange.com/questions/128985/why-not-parse-ls
-        # use alternative commands such as `find`or `stat` [SC2012]
-        # https://github.com/koalaman/shellcheck/wiki/SC2012
-        lsl=$(ls -l "$f" | sed -n '$p') # temp fix for directories, ls -l prints 2 lines for directories
-        fpermissions=$(echo "$lsl" | awk '{print $1}')
-        fowner=$(echo "$lsl" | awk '{print $3}')
-        fgroup=$(echo "$lsl" | awk '{print $4}')
-        fmodified=$(echo "$lsl" | awk '{print $6, $7, $8}')
+        # fpermissions=$(stat --format "%A" "$f")
+        fpermissions=$(stat -f "%Sp" "$f")
+        # fowner=$(stat --format "%U" "$f")
+        fowner=$(stat -f "%Su" "$f")
+        # fgroup=$(stat --format "%G" "$f")
+        fgroup=$(stat -f "%Sg" "$f")
+        # fmodified=$(stat --format "%y" "$f")
+        fmodified=$(stat -f "%Sm" "$f")
         if [ "$ftype" = "regular file" ]; then
             fhash=$(hash_algorithm "$f")
             fwc=$(wc "$f" | awk '{print $1, $2, $3}')
