@@ -1,0 +1,10 @@
+language: sh
+os:
+  - linux
+  - osx
+
+before_script:
+  - sh travis/before.sh
+
+script:
+  - sh travis/run.sh

@@ -12,6 +12,5 @@ Good: asm/folder 1/usershell
 Good: asm/folder 1/zlogin
 Good: asm/folder 1/zpreztorc
 Good: asm/folder 1/zshrc
-Good: asm/folder2/file.txt
-Good: asm/folder2/image.png
 Good: asm/folder2/stuff
+Good: asm/folder2/symlink
