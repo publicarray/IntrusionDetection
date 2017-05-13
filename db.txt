@@ -1,22 +1,22 @@
-|seb|staff|drwxr-xr-x|May  6 20:48:10 2017|directory||/Users/seb/git/IntrusionDetection/asm/folder1
-5120c6f250bc606332cd9efb7fadd273839af6e5fcd5341ff42bd01e5d14d7bc|seb|staff|-rw-r--r--|Mar 26 23:14:48 2017|regular file|54 280 2680|/Users/seb/git/IntrusionDetection/asm/folder1/aliases
-6a98fd52c62c279787e03101e597d8982155c02d1a1721b3a85138bb61f953f0|seb|staff|-rw-r--r--|Sep 15 06:28:43 2015|regular file|5 10 62|/Users/seb/git/IntrusionDetection/asm/folder1/bash_profile
-9f76c274e4e762280d988bf2e99eed1bda7a8614fa86596152d3ebcbb4b40c8f|seb|staff|-rw-r--r--|Jun 17 20:10:32 2016|regular file|19 39 265|/Users/seb/git/IntrusionDetection/asm/folder1/bashrc
-2b80135935b7b14e7a70f17adbd4983245538ca99b50e73fdaacb1df9ec0b8d2|seb|staff|-rw-r--r--|Nov 11 21:54:42 2016|regular file|31 82 588|/Users/seb/git/IntrusionDetection/asm/folder1/editorconfig
-5e3e1f88aafa6d63cc84d0e204da25c414e48997dacfb01c5df991b12fb7108d|seb|staff|-rw-r--r--|Apr 21 20:54:52 2017|regular file|21 39 325|/Users/seb/git/IntrusionDetection/asm/folder1/eslintrc.js
-8f4e46b7e1b5b878d973de306c3c280b39746cb9a3f079292d783058020c49e9|seb|staff|-rw-r--r--|Dec  6 08:52:42 2016|regular file|23 45 442|/Users/seb/git/IntrusionDetection/asm/folder1/exports
-532377bd71986bb290f965bc860d8d7d6adcab6f9fd53f859efe5400f55ca3d1|seb|staff|-rw-r--r--|Jan 27 10:52:17 2017|regular file|143 620 4371|/Users/seb/git/IntrusionDetection/asm/folder1/functions
-d1d8f540115c1e955f3bc3fd1dcef7f15c302887a63760c904ce68e11214013f|seb|staff|-rw-r--r--|Sep 16 21:18:42 2016|regular file|110 439 3662|/Users/seb/git/IntrusionDetection/asm/folder1/gitconfig
-b94c588afaab5ad4ea6b4c4a4d0de14f9e3c7a5277695b8eaefb4b45748c5dce|seb|staff|-rw-r--r--|Mar 26 23:14:48 2017|regular file|2 4 56|/Users/seb/git/IntrusionDetection/asm/folder1/gitconfig.local
-bb8ae00b41441e656d7e57eacbd1fbba21e75eec2c5c7fd711a503af107cdc58|seb|staff|-rw-r--r--|May  9 19:02:38 2015|regular file|72 131 913|/Users/seb/git/IntrusionDetection/asm/folder1/gitignore_global
-e56d0b1424ee49fe8c20da2e742ecd7bd5fc4178a50d06a4d2ef48559d2f416e|seb|staff|-rw-r--r--|Jun 17 20:06:57 2016|regular file|11 65 488|/Users/seb/git/IntrusionDetection/asm/folder1/usershell
-34937d06e2613fbe4fd2c470d0fc28e817bcb5406a20279c7f35015b34fd5793|seb|staff|-rw-r--r--|Jun 18 12:33:19 2016|regular file|21 69 496|/Users/seb/git/IntrusionDetection/asm/folder1/zlogin
-4f1e0ff0cd5c16d88426caf8e890bc0c66a1e1c01c204a8d3534e21798bcb92e|seb|staff|-rw-r--r--|Aug 21 13:08:24 2016|regular file|173 531 3716|/Users/seb/git/IntrusionDetection/asm/folder1/zpreztorc
-7f2ca8f0b29002f9b83d154099d5e593a6df05d63242edeb0592f80f9d7beca4|seb|staff|-rw-r--r--|Sep 21 21:13:30 2016|regular file|39 118 800|/Users/seb/git/IntrusionDetection/asm/folder1/zshrc
-|seb|staff|drwxr-xr-x|May  7 11:36:36 2017|directory||/Users/seb/git/IntrusionDetection/asm/folder2
-8e1cee3b08f40fcbde1f8fab69137cf0f42f160b34032d062150c2770a51318b|seb|staff|-rw-r--r--|May  7 11:26:27 2017|regular file|0 11 6148|/Users/seb/git/IntrusionDetection/asm/folder2/.DS_Store
-5c969eab59fd8bfe6c2ee8c3003b5077dbecd6f9dfdc79e7dabcfd027c54a5b6|seb|staff|-rw-r--r--|May  9 14:16:38 2017|regular file|13 43 317|/Users/seb/git/IntrusionDetection/asm/folder2/file.txt
-e9834485fcabbb9773457291168f7274c0aa3e9188a6fd801ec28e73489ef077|seb|staff|-rw-r--r--|Mar 26 18:38:50 2017|regular file|78 671 24636|/Users/seb/git/IntrusionDetection/asm/folder2/image.png
-|seb|staff|drwxr-xr-x|May  6 22:44:08 2017|directory||/Users/seb/git/IntrusionDetection/asm/folder2/stuff
-d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3|seb|staff|-rw-r--r--|May  6 22:42:53 2017|regular file|0 10 6148|/Users/seb/git/IntrusionDetection/asm/folder2/stuff/.DS_Store
-|seb|staff|lrwxr-xr-x|May  6 22:44:08 2017|symlink||/Users/seb/git/IntrusionDetection/asm/folder2/stuff/S.png
+|seb|staff|drwxr-xr-x|May  6 20:48:10 2017|directory||asm/folder1
+5120c6f250bc606332cd9efb7fadd273839af6e5fcd5341ff42bd01e5d14d7bc|seb|staff|-rw-r--r--|Mar 26 23:14:48 2017|regular file|54 280 2680|asm/folder1/aliases
+6a98fd52c62c279787e03101e597d8982155c02d1a1721b3a85138bb61f953f0|seb|staff|-rw-r--r--|Sep 15 06:28:43 2015|regular file|5 10 62|asm/folder1/bash_profile
+9f76c274e4e762280d988bf2e99eed1bda7a8614fa86596152d3ebcbb4b40c8f|seb|staff|-rw-r--r--|Jun 17 20:10:32 2016|regular file|19 39 265|asm/folder1/bashrc
+2b80135935b7b14e7a70f17adbd4983245538ca99b50e73fdaacb1df9ec0b8d2|seb|staff|-rw-r--r--|Nov 11 21:54:42 2016|regular file|31 82 588|asm/folder1/editorconfig
+5e3e1f88aafa6d63cc84d0e204da25c414e48997dacfb01c5df991b12fb7108d|seb|staff|-rw-r--r--|Apr 21 20:54:52 2017|regular file|21 39 325|asm/folder1/eslintrc.js
+8f4e46b7e1b5b878d973de306c3c280b39746cb9a3f079292d783058020c49e9|seb|staff|-rw-r--r--|Dec  6 08:52:42 2016|regular file|23 45 442|asm/folder1/exports
+532377bd71986bb290f965bc860d8d7d6adcab6f9fd53f859efe5400f55ca3d1|seb|staff|-rw-r--r--|Jan 27 10:52:17 2017|regular file|143 620 4371|asm/folder1/functions
+d1d8f540115c1e955f3bc3fd1dcef7f15c302887a63760c904ce68e11214013f|seb|staff|-rw-r--r--|Sep 16 21:18:42 2016|regular file|110 439 3662|asm/folder1/gitconfig
+b94c588afaab5ad4ea6b4c4a4d0de14f9e3c7a5277695b8eaefb4b45748c5dce|seb|staff|-rw-r--r--|Mar 26 23:14:48 2017|regular file|2 4 56|asm/folder1/gitconfig.local
+bb8ae00b41441e656d7e57eacbd1fbba21e75eec2c5c7fd711a503af107cdc58|seb|staff|-rw-r--r--|May  9 19:02:38 2015|regular file|72 131 913|asm/folder1/gitignore_global
+e56d0b1424ee49fe8c20da2e742ecd7bd5fc4178a50d06a4d2ef48559d2f416e|seb|staff|-rw-r--r--|Jun 17 20:06:57 2016|regular file|11 65 488|asm/folder1/usershell
+34937d06e2613fbe4fd2c470d0fc28e817bcb5406a20279c7f35015b34fd5793|seb|staff|-rw-r--r--|Jun 18 12:33:19 2016|regular file|21 69 496|asm/folder1/zlogin
+4f1e0ff0cd5c16d88426caf8e890bc0c66a1e1c01c204a8d3534e21798bcb92e|seb|staff|-rw-r--r--|Aug 21 13:08:24 2016|regular file|173 531 3716|asm/folder1/zpreztorc
+7f2ca8f0b29002f9b83d154099d5e593a6df05d63242edeb0592f80f9d7beca4|seb|staff|-rw-r--r--|Sep 21 21:13:30 2016|regular file|39 118 800|asm/folder1/zshrc
+|seb|staff|drwxr-xr-x|May  7 11:36:36 2017|directory||asm/folder2
+8e1cee3b08f40fcbde1f8fab69137cf0f42f160b34032d062150c2770a51318b|seb|staff|-rw-r--r--|May  7 11:26:27 2017|regular file|0 11 6148|asm/folder2/.DS_Store
+5c969eab59fd8bfe6c2ee8c3003b5077dbecd6f9dfdc79e7dabcfd027c54a5b6|seb|staff|-rw-r--r--|May  9 14:16:38 2017|regular file|13 43 317|asm/folder2/file.txt
+e9834485fcabbb9773457291168f7274c0aa3e9188a6fd801ec28e73489ef077|seb|staff|-rw-r--r--|Mar 26 18:38:50 2017|regular file|78 671 24636|asm/folder2/image.png
+|seb|staff|drwxr-xr-x|May  6 22:44:08 2017|directory||asm/folder2/stuff
+d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3|seb|staff|-rw-r--r--|May  6 22:42:53 2017|regular file|0 10 6148|asm/folder2/stuff/.DS_Store
+|seb|staff|lrwxr-xr-x|May  6 22:44:08 2017|symlink||asm/folder2/stuff/S.png

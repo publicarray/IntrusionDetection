@@ -1,4 +1,5 @@
 last-db=/Users/seb/git/IntrusionDetection/db.txt
-include /Users/seb/git/IntrusionDetection/asm/folder1
-include /Users/seb/git/IntrusionDetection/asm/folder2
-exclude /Users/seb/git/IntrusionDetection/asm/folder3
+# please use absolute paths, relative path only for demonstration purposes
+include asm/folder1
+include asm/folder2
+exclude asm/folder3

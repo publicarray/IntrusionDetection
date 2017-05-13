@@ -75,7 +75,7 @@ config() {
     # https://stackoverflow.com/questions/18789907/read-values-from-configuration-file-and-use-in-shell-script
     while IFS='' read -r line || [ -n "$line" ]; do
         case "$line" in
-            ("include "*)
+            ("include "*) #process files and folders
                 search=$(echo "$line" | awk '{print $2}')
                 echo "Search: $search"
                 if [ "$1" = "create" ]; then
@@ -84,13 +84,15 @@ config() {
                     validate "$search"
                 fi
                 ;;
-            ("exclude "*)
+            ("exclude "*) #
                 # ToDo
                 search=$(echo "$line" | awk '{print $2}')
                 echo "exclude: $search"
                 ;;
-            ("last-db="*)
+            ("last-db="*) #cached db file path
                 DB=$(echo "$line" | awk -F '=' '/last-db=/ {print $2}')
+                ;;
+            ("#"*) #comments
                 ;;
             (*)
                 echo "error parsing: $line";;
