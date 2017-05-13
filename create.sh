@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # get Platform specific stat
-if command -v stat >/dev/null 2>&1 && stat --version | grep "GNU" >/dev/null 2>&1; then
+if command -v stat >/dev/null 2>&1 && stat --version >/dev/null 2>&1; then
     STAT=gnu_stat
 elif command -v stat >/dev/null 2>&1 && stat -f "" >/dev/null 2>&1; then
     STAT=freebsd_stat
@@ -77,6 +77,7 @@ hash_algorithm() {
     elif command -v gsha1sum >/dev/null 2>&1; then
         gsha1sum $1 | awk '{ print $1 }'
     else
-        md5 -q $1
+        echo "required checksum program not found! missing sha256sum or sha1sum."
+        exit 1
     fi
 }
