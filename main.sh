@@ -5,7 +5,20 @@
 FILE=result.txt
 # shellcheck disable=SC2034
 DB=db.txt
+FORCE=0
 CONFIG_FILE=settings.conf
+
+usage() {
+    printf "Simple and dirty intrusion detection script\n"
+    printf "\n"
+    printf "usage: ./main.sh [arguments]\n"
+    printf "\t-h --help - this message\n"
+    printf "\t-f --force - don't ask for confirmations\n"
+    printf "\t-c --create [filename] - create database file\n"
+    printf "\t-v --verify [filename] - check files against the database and save results to file\n"
+    printf "\n"
+    printf "home page: <https://github.com/publicarray/IntrusionDetection>\n"
+}
 
 main() {
     if [ -f create.sh ] && [ -f validate.sh ]; then
@@ -20,33 +33,59 @@ main() {
 
     # If < 2 params, display usage info
     if [ "$#" -lt "2" ]; then
-        printf "usage: %s [arguments]\n  -c db-filename\n  -v result-filename\n\n" "$0"
-        echo "home page: <https://github.com/publicarray/IntrusionDetection>"
+        usage
         exit 1
     fi
 
-    if [ "$1" = "-c" ]; then
-        write_file "$2"
-        DB="$PWD/$2"
-        DBesc=$(echo "$DB" | sed 's_/_\\/_g') # escape slashes in file path
-        # cache last db filepath
-        if [ -n "$(awk '/last-db / {print}' "$CONFIG_FILE")" ]; then
-            sed -i '' -e '/^last-db /s/last-db .*/last-db '"$DBesc"'/' $CONFIG_FILE
-        else
-            # shellcheck disable=SC1003
-            sed -i '' -e '1s/^/last-db '"$DBesc"'\'"$(printf '\n\r')"'/' "$CONFIG_FILE"
-            # Mac complains when it's just a line feed (\n)
-        fi
-        config "create"
-    elif [ "$1" = "-v" ]; then
-        write_file "$2"
-        config "validate"
+    # https://gist.github.com/jehiah/855086
+    while [ "$1" != "" ]; do
+        case $1 in
+            -h | --help)
+                usage
+                exit
+                ;;
+            -f | --force)
+                FORCE=1
+                ;;
+            -c | --create)
+                shift
+                write_file "$1"
+                save_db_path_to_config "$1"
+                config "create"
+                ;;
+            -v | --verify)
+                shift
+                write_file "$1"
+                config "validate"
+                ;;
+            *)
+                echo "ERROR: unknown parameter \"$1\""
+                usage
+                exit 1
+                ;;
+        esac
+        shift # get next parameter
+    done
+}
+
+save_db_path_to_config() {
+    DB="$PWD/$1"
+    DBesc=$(echo "$DB" | sed 's_/_\\/_g') # escape slashes in file path
+    # cache last db filepath
+    if [ -n "$(awk '/last-db / {print}' "$CONFIG_FILE")" ]; then
+        sed -i '' -e '/^last-db /s/last-db .*/last-db '"$DBesc"'/' $CONFIG_FILE
+    else
+        # shellcheck disable=SC1003
+        sed -i '' -e '1s/^/last-db '"$DBesc"'\'"$(printf '\n\r')"'/' "$CONFIG_FILE"
+        # Mac complains when it's just a line feed (\n)
     fi
 }
 
 write_file() {
     FILE="$1";
-    if [ -f "$FILE" ]; then
+    if [ -f "$FILE" ] && [ $FORCE -eq 1 ]; then
+        cp /dev/null "$FILE" # truncate file if it exists
+    elif [ -f "$FILE" ]; then
         # ask before overwriting file
         # https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script
         while true; do
