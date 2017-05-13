@@ -1,5 +1,34 @@
 #!/bin/sh
 
+# get Platform specific stat
+if command -v stat >/dev/null 2>&1 && stat --format "" >/dev/null 2>&1; then
+    STAT=gnu_stat
+elif command -v stat >/dev/null 2>&1 && stat -f "" >/dev/null 2>&1; then
+    STAT=freebsd_stat
+else
+    echo "Platform not yet supported! incompatible stat"
+    exit 1
+fi
+
+gnu_stat() {
+    # fname=$(stat --format "%N" "$f")
+    fowner=$(stat --format "%U" "$1")
+    fgroup=$(stat --format "%G" "$1")
+    fpermissions=$(stat --format "%A" "$1")
+    fmodified=$(stat --format "%y" "$1")
+    echo "$fowner|$fgroup|$fpermissions|$fmodified"
+}
+
+freebsd_stat() {
+    # fname=$(stat -f "%Sn" "$f")
+    fowner=$(stat -f "%Su" "$1")
+    fgroup=$(stat -f "%Sg" "$1")
+    fpermissions=$(stat -f "%Sp" "$1")
+    fmodified=$(stat -f "%Sm" "$1")
+    echo "$fowner|$fgroup|$fpermissions|$fmodified"
+}
+# end stat
+
 create() {
     for f in $(find "$1") $files
     do
@@ -9,32 +38,23 @@ create() {
 
 file_details() {
     fpath="$1"
-    # fname=$(stat --format "%N" "$f")
-    # fname=$(stat -f "%Sn" "$f")
     ftype=$(file_type "$f")
 
     if [ "$ftype" != "unknown" ]; then
-        # fpermissions=$(stat --format "%A" "$f")
-        fpermissions=$(stat -f "%Sp" "$f")
-        # fowner=$(stat --format "%U" "$f")
-        fowner=$(stat -f "%Su" "$f")
-        # fgroup=$(stat --format "%G" "$f")
-        fgroup=$(stat -f "%Sg" "$f")
-        # fmodified=$(stat --format "%y" "$f")
-        fmodified=$(stat -f "%Sm" "$f")
+        # run platform specific stat command
+        fstat_out=$($STAT $f)
         if [ "$ftype" = "regular file" ]; then
             fhash=$(hash_algorithm "$f")
             fwc=$(wc "$f" | awk '{print $1, $2, $3}')
         fi
     fi
 
-    echo "$fhash|$fowner|$fgroup|$fpermissions|$ftype|$fmodified|$fwc|$fpath"
+    echo "$fhash|$fstat_out|$ftype|$fwc|$fpath"
     unset fwc fhash fmodified fgroup fowner fpermissions lsl
 }
 
 # regular file, directory, symlink, unknown
 file_type() {
-    #if [[ $1 -h ]]; then
     if [ -L "$1" ]; then
         echo "symlink"
     elif [ -d "$1" ]; then

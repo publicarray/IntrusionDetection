@@ -10,9 +10,9 @@ CONFIG_FILE=conf.txt
 main() {
     if [ -f create.sh ] && [ -f validate.sh ]; then
        # shellcheck disable=SC1091
-       . create.sh
+       . ./create.sh
        # shellcheck disable=SC1091
-       . validate.sh
+       . ./validate.sh
     else
         echo "create.sh or validate.sh not found"
         exit 1
