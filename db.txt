@@ -1,4 +1,4 @@
-|seb|staff|drwxr-xr-x|May  6 20:48:10 2017|directory||asm/folder 1
+|seb|staff|drwxr-xr-x|May 13 19:18:46 2017|directory||asm/folder 1
 5120c6f250bc606332cd9efb7fadd273839af6e5fcd5341ff42bd01e5d14d7bc|seb|staff|-rw-r--r--|Mar 26 23:14:48 2017|regular file|54 280 2680|asm/folder 1/aliases
 6a98fd52c62c279787e03101e597d8982155c02d1a1721b3a85138bb61f953f0|seb|staff|-rw-r--r--|Sep 15 06:28:43 2015|regular file|5 10 62|asm/folder 1/bash_profile
 9f76c274e4e762280d988bf2e99eed1bda7a8614fa86596152d3ebcbb4b40c8f|seb|staff|-rw-r--r--|Jun 17 20:10:32 2016|regular file|19 39 265|asm/folder 1/bashrc

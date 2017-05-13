@@ -33,8 +33,9 @@ main() {
         if [ -n "$(awk '/last-db / {print}' "$CONFIG_FILE")" ]; then
             sed -i '' -e '/^last-db /s/last-db .*/last-db '"$DBesc"'/' $CONFIG_FILE
         else
-            # https://stackoverflow.com/questions/16576197/how-to-add-new-line-using-sed-mac
-            sed -i '' -e '1s/^/last-db '"$DBesc"'\'$'\n/' "$CONFIG_FILE"
+            # shellcheck disable=SC1003
+            sed -i '' -e '1s/^/last-db '"$DBesc"'\'"$(printf '\n\r')"'/' "$CONFIG_FILE"
+            # Mac complains when it's just a line feed (\n)
         fi
         config "create"
     elif [ "$1" = "-v" ]; then

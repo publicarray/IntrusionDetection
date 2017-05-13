@@ -4,7 +4,7 @@
 if command -v stat >/dev/null 2>&1 && stat --version >/dev/null 2>&1; then
     STAT=gnu_stat
 elif command -v stat >/dev/null 2>&1 && stat -f "" >/dev/null 2>&1; then
-    STAT=freebsd_stat
+    STAT=bsd_stat
 else
     echo "Platform not yet supported! incompatible stat"
     exit 1
@@ -19,7 +19,7 @@ gnu_stat() {
     echo "$fowner|$fgroup|$fpermissions|$fmodified"
 }
 
-freebsd_stat() {
+bsd_stat() {
     # fname=$(stat -f "%Sn" "$f")
     fowner=$(stat -f "%Su" "$1")
     fgroup=$(stat -f "%Sg" "$1")
@@ -30,23 +30,43 @@ freebsd_stat() {
 # end stat
 
 create() {
+    # Note: can't handle filenames with line feeds
+
+    # shell check complains
+    # shellcheck disable=SC2116,2028
     IFS=$(echo "\n\b") #handle spaces
-    for f in $(find "$1") $files
+    # shellcheck disable=SC2044
+    for f in $(find "$1")
     do
         file_details "$f" >> "$FILE"
     done
+
+    # non-recursive
+    # file_details "$1" >> "$FILE"
+    # for f in "$1"/**
+    # do
+    #     file_details "$f" >> "$FILE"
+    # done
+
+    # creates a temp file
+    # find "$1" ! -name "$(printf "*\n*")" > tmp
+    # while IFS= read -r f
+    # do
+    #     file_details "$f" >> "$FILE"
+    # done < tmp
+    # rm tmp
 }
 
 file_details() {
     fpath="$1"
-    ftype=$(file_type "$f")
+    ftype=$(file_type "$1")
 
     if [ "$ftype" != "unknown" ]; then
         # run platform specific stat command
-        fstat_out=$($STAT $f)
+        fstat_out=$($STAT "$1")
         if [ "$ftype" = "regular file" ]; then
-            fhash=$(hash_algorithm "$f")
-            fwc=$(wc "$f" | awk '{print $1, $2, $3}')
+            fhash=$(hash_algorithm "$1")
+            fwc=$(wc "$1" | awk '{print $1, $2, $3}')
         fi
     fi
 
@@ -70,13 +90,13 @@ file_type() {
 hash_algorithm() {
     # https://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script
     if command -v sha256sum >/dev/null 2>&1; then
-        sha256sum $1 | awk '{ print $1 }'
+        sha256sum "$1" | awk '{ print $1 }'
     elif command -v gsha256sum >/dev/null 2>&1; then
-        gsha256sum $1 | awk '{ print $1 }'
+        gsha256sum "$1" | awk '{ print $1 }'
     elif command -v sha1sum >/dev/null 2>&1; then
-        sha1sum $1 | awk '{ print $1 }'
+        sha1sum "$1" | awk '{ print $1 }'
     elif command -v gsha1sum >/dev/null 2>&1; then
-        gsha1sum $1 | awk '{ print $1 }'
+        gsha1sum "$1" | awk '{ print $1 }'
     else
         echo "required checksum program not found! missing sha256sum or sha1sum."
         exit 1
