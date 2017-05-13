@@ -28,7 +28,7 @@ main() {
     if [ "$1" = "-c" ]; then
         write_file "$2"
         DB="$PWD/$2"
-        DBesc=$(echo "$DB" | sed 's_/_\\/_g')
+        DBesc=$(echo "$DB" | sed 's_/_\\/_g') # escape slashes in file path
         # cache last db filepath
         if [ -n "$(awk '/last-db=/ {print}' "$CONFIG_FILE")" ]; then
             sed -i '' -e '/^last-db=/s/=.*/='"$DBesc"'/' $CONFIG_FILE
