@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # get Platform specific stat
-if command -v stat >/dev/null 2>&1 && stat --format "" >/dev/null 2>&1; then
+if command -v stat >/dev/null 2>&1 && stat --version | grep "GNU" >/dev/null 2>&1; then
     STAT=gnu_stat
 elif command -v stat >/dev/null 2>&1 && stat -f "" >/dev/null 2>&1; then
     STAT=freebsd_stat
