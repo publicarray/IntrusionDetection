@@ -5,7 +5,7 @@
 FILE=result.txt
 # shellcheck disable=SC2034
 DB=db.txt
-CONFIG_FILE=conf.config
+CONFIG_FILE=settings.conf
 
 main() {
     if [ -f create.sh ] && [ -f validate.sh ]; then
