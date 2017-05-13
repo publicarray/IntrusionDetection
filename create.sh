@@ -30,6 +30,7 @@ freebsd_stat() {
 # end stat
 
 create() {
+    IFS=$(echo "\n\b") #handle spaces
     for f in $(find "$1") $files
     do
         file_details "$f" >> "$FILE"

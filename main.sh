@@ -30,12 +30,11 @@ main() {
         DB="$PWD/$2"
         DBesc=$(echo "$DB" | sed 's_/_\\/_g') # escape slashes in file path
         # cache last db filepath
-        if [ -n "$(awk '/last-db=/ {print}' "$CONFIG_FILE")" ]; then
-            sed -i '' -e '/^last-db=/s/=.*/='"$DBesc"'/' $CONFIG_FILE
+        if [ -n "$(awk '/last-db / {print}' "$CONFIG_FILE")" ]; then
+            sed -i '' -e '/^last-db /s/last-db .*/last-db '"$DBesc"'/' $CONFIG_FILE
         else
-# shellcheck disable=SC1004
-            sed -i '' -e '1s/^/last-db='"$DBesc"'\
-/' "$CONFIG_FILE" # hack: add new line at the end
+            # https://stackoverflow.com/questions/16576197/how-to-add-new-line-using-sed-mac
+            sed -i '' -e '1s/^/last-db '"$DBesc"'\'$'\n/' "$CONFIG_FILE"
         fi
         config "create"
     elif [ "$1" = "-v" ]; then
@@ -76,7 +75,7 @@ config() {
     while IFS='' read -r line || [ -n "$line" ]; do
         case "$line" in
             ("include "*) #process files and folders
-                search=$(echo "$line" | awk '{print $2}')
+                search=$(echo "$line" | awk '{$1="";print substr($0,2)}')
                 echo "Search: $search"
                 if [ "$1" = "create" ]; then
                     create "$search"
@@ -86,11 +85,11 @@ config() {
                 ;;
             ("exclude "*) #
                 # ToDo
-                search=$(echo "$line" | awk '{print $2}')
+                search=$(echo "$line" | awk '{$1="";print substr($0,2)}')
                 echo "exclude: $search"
                 ;;
-            ("last-db="*) #cached db file path
-                DB=$(echo "$line" | awk -F '=' '/last-db=/ {print $2}')
+            ("last-db "*) #cached db file path
+                DB=$(echo "$line" | awk '{$1="";print substr($0,2)}')
                 ;;
             ("#"*) #comments
                 ;;

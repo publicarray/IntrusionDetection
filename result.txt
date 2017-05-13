@@ -1,17 +1,17 @@
-Good: asm/folder1/aliases
-Good: asm/folder1/bash_profile
-Good: asm/folder1/bashrc
-Good: asm/folder1/editorconfig
-Good: asm/folder1/eslintrc.js
-Good: asm/folder1/exports
-Good: asm/folder1/functions
-Good: asm/folder1/gitconfig
-Good: asm/folder1/gitconfig.local
-Good: asm/folder1/gitignore_global
-Good: asm/folder1/usershell
-Good: asm/folder1/zlogin
-Good: asm/folder1/zpreztorc
-Good: asm/folder1/zshrc
+Good: asm/folder 1/aliases
+Good: asm/folder 1/bash_profile
+Good: asm/folder 1/bashrc
+Good: asm/folder 1/editorconfig
+Good: asm/folder 1/eslintrc.js
+Good: asm/folder 1/exports
+Good: asm/folder 1/functions
+Good: asm/folder 1/gitconfig
+Good: asm/folder 1/gitconfig.local
+Good: asm/folder 1/gitignore_global
+Good: asm/folder 1/usershell
+Good: asm/folder 1/zlogin
+Good: asm/folder 1/zpreztorc
+Good: asm/folder 1/zshrc
 Good: asm/folder2/file.txt
 Good: asm/folder2/image.png
 Good: asm/folder2/stuff

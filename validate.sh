@@ -7,6 +7,7 @@ validate() {
         files="$1"
     fi
 
+    IFS=$(echo "\n\b") #handle spaces
     for f in $files
     do
         check_db "$f"
