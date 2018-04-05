@@ -5,4 +5,6 @@ detects file modifications by last modification date, file path, file type (dire
 
 [![Build Status](https://travis-ci.org/publicarray/IntrusionDetection.svg?branch=master)](https://travis-ci.org/publicarray/IntrusionDetection)
 
-![demo](demo.gif)
+<p align="center">
+    <img width="840" src="demo.svg">
+</p>
